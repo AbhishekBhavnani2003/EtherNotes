@@ -29,7 +29,7 @@ function App() {
     }, 1500);
   }
 
-  
+
   const togglemode = () => {
     if (mode === 'dark') {
       setmode('light');
@@ -48,20 +48,20 @@ function App() {
 
   return (
     <Notestate>
-    <Router>
-      <>
-        <Navbar mode={mode} togglemode={togglemode}/>
-        <Alert alert={alert} />
-       <div className="container">
-        <Routes>
-          <Route path='/' element={<Home showalert={showalert} togglemode={togglemode}/> } />
-          <Route path="/about" element={<About togglemode={togglemode} />} />
-          <Route path="/login" element={<Login showalert={showalert} togglemode={togglemode}/>} />
-          <Route path="/signup" element={<Signup showalert={showalert} togglemode={togglemode}/>} />
-        </Routes>
-        </div>
-      </>
-    </Router>
+      <Router>
+        <>
+          <Navbar mode={mode} togglemode={togglemode} />
+          <Alert alert={alert} />
+          <div className="container">
+            <Routes>
+              <Route path='/' element={<Home showalert={showalert} togglemode={togglemode} />} />
+              <Route path="/about" element={<About togglemode={togglemode} />} />
+              <Route path="/login" element={<Login showalert={showalert} togglemode={togglemode} />} />
+              <Route path="/signup" element={<Signup showalert={showalert} togglemode={togglemode} />} />
+            </Routes>
+          </div>
+        </>
+      </Router>
     </Notestate>
   );
 }
