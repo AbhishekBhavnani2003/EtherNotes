@@ -1,0 +1,14 @@
+.feature-list .list-group-item {
+    position: relative;
+    padding-left: 35px; 
+    border: none; 
+  }
+  
+  .feature-list .list-group-item:before {
+    content: "✔"; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745; 
+  }
