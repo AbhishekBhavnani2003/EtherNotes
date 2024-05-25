@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-const mongouri = "mongodb://0.0.0.0:27017/mynotebook";
+require('dotenv').config(); 
+
+const username = encodeURIComponent(process.env.MONGO_USERNAME);
+const password = encodeURIComponent(process.env.MONGO_PASSWORD);
+
+const mongouri = `mongodb+srv://${username}:${password}@ethernotes.hyewp0o.mongodb.net/?retryWrites=true&w=majority&appName=EtherNotes`;
 
 const connecttomongo = () => {
     return mongoose.connect(mongouri)
